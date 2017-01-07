@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { height: 100%; overflow: hidden; }
+body { height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: 'Open Sans', sans-serif; }
+input:focus::-webkit-input-placeholder { color: transparent; }
+input:focus:-moz-placeholder { color: transparent; }
+ul { list-style: none; }
+h1, h2 { display: block; font-weight: normal; padding: 0; font-size: 14px; }
+.NS {
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+#Loader { background: #c6d3d7; position: fixed; top: 0; left: 0; right: 0; bottom: 0; overflow: auto; }
+#Load-Group { position: absolute; top: 50%; margin-top: -189px; left: 50%; margin-left: -325px; height: 378px; width: 649px; overflow: hidden; }
+#Logo-Big { position: absolute; top: 0px; left: 0px; }
+#Progress { position: absolute; bottom: 0px; left: 0px; }
+#Progress > li { height: 94px; width: 94px; float: left; margin-left: 15px; margin-right: 50px; background: transparent url("../i/coconut.png"); display: none; }
+
+/* Scene goes here */
+#Scene { min-height: 670px; position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; cursor: url("../i/cursor.png"), auto; background: #cce9f1; }
+
+/* Sky */
+#Cloud1 { position: absolute; top: 20px; left: -226px; width: 226px; height: 85px; background: transparent url("../i/cl1.png") repeat; }
+#Cloud2 { position: absolute; opacity: 0; top: 70px; left: 150px; width: 72px; height: 37px; background: transparent url("../i/cl2.png") repeat; }
+#Cloud3 { position: absolute; top: 50px; left: -345px; width: 345px; height: 155px; background: transparent url("../i/cl3.png") repeat; }
+
+/* Horizon */
+#Horizon-Clouds { position: absolute; left: 0px; right: 0; height: 121px; bottom: 250px; background: transparent url("../i/clouds.png") repeat; }
+#Back-Waves { position: absolute; left: 0px; right: 0; height: 36px; bottom: 250px; background: transparent url("../i/waves2.png") repeat; }
+#Island { width: 350px; height: 403px; position: absolute; bottom: 250px; left: 50%; margin-left: -175px; }
+#Belt { width: 91px; height: 73px; position: absolute; top: 158px; left: 66px; background: transparent url("../i/belt.png"); }
+#Bubble { width: 255px; height: 141px; position: absolute; bottom: 200px; right: -135px; background: transparent url("../i/bubble.png"); display: none; }
+#Bubble > p { position: absolute; top: 0px; right: 0px; left: 19px; bottom: 16px; color: #0098c4; padding: 5px; font-size: 13px; }
+#Front-Waves { position: absolute; left: -79px; right: 0; height: 36px; bottom: 250px; background: transparent url("../i/waves.png") repeat; }
+#Water { position: absolute; bottom: 0px; min-height: 250px; background: #76b2cc; left: 0px; right: 0px; }
+#Page-Logo { position: absolute; top: 50%; left: 50%; width: 288px; height: 45px; margin-top: -23.5px; margin-left: -144px; background: transparent url("../i/logo2.png"); }
+
+/* Profile */
+#Profile { background: transparent url("../i/tr-white-05.png") repeat; position: fixed; height: 435px; width: 970px; top: 50%; margin-top: -218px; left: 50%; margin-left: -485px; display: none; border-radius: 5px; }
+#Profile > .Bar { position: absolute; top: 50px; left: 50px; right: 50px; height: 45px; background: #f8f8f8; overflow: hidden; }
+#ProBar { background: #fff; width: 20%; height: 45px; }
+#Navigation { position: absolute; text-shadow: 1px 1px 1px #fff; top: 50px; left: 50px; right: 50px; height: 45px; overflow: hidden; text-align: center; color: #087ba6; }
+#Navigation > li { cursor: pointer; float: left; width: 20%; height: 41px; line-height: 41px; margin-top: 2px; }
+#Navigation > li:hover { font-weight: bold; }
+#Navigation > li.Orange { border-left: 2px #e49174 solid; }
+#Navigation > li.Yellow { border-left: 2px #f2f177 solid; }
+#Navigation > li.Blue { border-left: 2px #88d5f2 solid; }
+#Navigation > li.Green { border-left: 2px #82d788 solid; }
+#Navigation > li.Purple { border-left: 2px #e9d4e8 solid; }
+
+#Content { background: #fff; position: absolute; top: 95px; left: 50px; right: 50px; bottom: 50px; overflow: hidden; }
+#Content > div { min-height: 300px; overflow: hidden; margin: 5px; }
+
+/* About me */
+#About { background: #FCEDE8; height: 280px; margin-bottom: 5px; overflow: hidden; }
+#Photo { height: 260px; margin: 10px 10px 10px 10px; width: 260px; float: left; position: relative; border-radius: 5px; overflow: hidden; display: none; }
+#Photo > div { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: transparent url("../i/static.gif") repeat; opacity: 0.05; }
+#Profile-Info { height: 260px; margin: 10px 10px 10px 0; width: 570px; float: left; display: none; }
+#Profile-Info > h1 { text-align: center; font-size: 18px; line-height: 30px; }
+#Profile-Info > h2 { text-align: center; text-transform: uppercase; font-size: 10px; color: #FF9874; }
+#Profile-Info > p { padding: 5px; font-size: 12px; color: #3C3C3C; }
+#Profile-Info > div { font-size: 12px; text-align: center; color: #f94000; cursor: pointer; }
+#Profile-Info > div:hover { color: red; }
+/* Skills */
+#Skills { background: #FFFFE2; height: 280px; margin-bottom: 5px; padding: 5px; }
+#Skills > div { width: 276px; float: left; height: 270px; margin-right: 10px; }
+#Skills > div > h1 { text-align: center; }
+#Skills > div > p { font-size: 11px; text-align: center; color: #808080; }
+#Skills > div > ul > li { height: 30px; background: #575757; position: relative; margin: 5px 10px 0 10px; border: 1px #d6d6d6 solid; padding: 1px; }
+#Skills > div > ul > li > .Info { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; text-align: center; line-height: 30px; color: #fff; font-size: 12px; text-shadow: 1px 1px 1px #000; display: none; }
+#Skills > div > ul > li > .Bar { width: 0%; height: 26px; }
+#Skills > div > ul > li > .Bar.Green { background: #65c356 url("../i/progress.png") repeat; }
+#Skills > div > ul > li > .Bar.Orange { background: #ff703e url("../i/progress.png") repeat; }
+#Skills > div > ul > li > .Bar.Yellow { background: #F7FF3E url("../i/progress.png") repeat; }
+
+/* Experience */
+#Experience { background: #E8F9FF; height: 280px; margin-bottom: 5px; padding: 5px; }
+#Experience > .Companies { height: 180px; }
+#Experience > .Companies > div { display: none; }
+#Experience > div > div { height: inherit; width: 212px; float: left; }
+#Experience > div > div.Big { width: 213px !important; }
+#Experience > .Companies > div > .Logo { height: 120px; width: 120px; background: #fff; border-radius: 360px; margin: 10px auto; overflow: hidden; }
+#Experience > .Companies > div > .Logo > img { margin: 5px; }
+#Experience > .Companies > div > h1 { text-align: center; font-size: 12px; }
+#Experience > .Companies > div > h2 { text-align: center; font-size: 10px; }
+#Experience > .Timeline { height: 35px; overflow: hidden; position: relative; }
+#Experience > .Timeline > span { display: block; position: absolute; left: 0px; right: 0px; top: 16px; height: 3px; background: #a7cdda; }
+#Experience > .Timeline > div > div { height: 19px; width: 19px; border-radius: 360px; margin: 8px auto; background: #a7cdda; }
+#Experience > .Info { height: 55px; }
+#Experience > .Info > div > h1 { line-height: 25px; font-size: 15px; text-align: center; color: #4E4E4E; }
+#Experience > .Info > div > h2 { line-height: 30px; font-size: 10px; text-align: center; font-weight: bold; color: #0544A2; }
+
+/* Portfolio */
+#Portfolio { background: #DFFFE1; height: 280px; margin-bottom: 5px; }
+
+/* Contacts */
+#Contacts { background: #f1f0e9; height: 280px; margin-bottom: 5px; position: relative; overflow: hidden; position: relative; }
+#Google-Map { height: 280px; background: #f1f0e9; }
+#Contact-Form { position: absolute; top: 20px; left: -250px; height: 245px; width: 250px; background: transparent url("../i/tr-white-08.png") repeat; padding: 5px; }
+#Contact-Form > label { font-size: 10px; color: #087ba6; }
+#Contact-Form > input { display: block; background: #fff; border: 1px #087ba6solid; line-height: 15px; padding: 5px 0 5px 0; width: 100%; text-align: center; }
+#Contact-Form > textarea { width: 100%; height: 75px; background: #fff; border: 1px #087ba6 solid; resize: none; padding: 3px; }
+#Send-Message { background: #087ba6; color: #fff; cursor: pointer; text-align: center; font-size: 12px; line-height: 25px; }
+#Send-Message:hover { background: #2692ba; }
+#Done { position: absolute; background: #cfffcd; line-height: 230px; text-align: center; top: 5px; left: 5px; right: 5px; bottom: 5px; display: none; color: #067700; }
+#Done > span { display: inline-block; vartical-align: middle; line-height: 14px; font-size: 12px; }
+
+#Close-Profile { background: #087ba6; position: absolute; bottom: 10px; left: 50%; margin-left: -50px; height: 30px; width: 100px; line-height: 30px; color: #fff; text-align: center; border-radius: 3px; cursor: pointer; }
+#Close-Profile:hover { background: #2692ba; }
